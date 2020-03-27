@@ -29,8 +29,8 @@ You can also list any pending features and planned improvements for the project 
 
 ## Repos and projects
 
-Uses reusable components from: <https://www.npmjs.com/package/@code4ro/taskforce-fe-components>
-Uses graphical assets from: <https://github.com/code4romania/covid-assets>
+- Uses reusable components from: <https://www.npmjs.com/package/@code4ro/taskforce-fe-components>
+- Uses graphical assets from: <https://github.com/code4romania/covid-assets>
 
 ## Development
 

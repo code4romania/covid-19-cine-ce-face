@@ -1,0 +1,19 @@
+# System files
+.DS_*
+
+# Editors
+.vscode
+.idea
+
+# Logs
+logs
+*.log
+npm-debug.log*
+**/*.backup.*
+**/*.back.*
+
+# Dependency directories
+*/node_modules/
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+frontend/build
