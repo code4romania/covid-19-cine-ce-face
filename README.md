@@ -1,6 +1,6 @@
 # Who's Who
 
-[![GitHub contributors](https://img.shields.io/github/contributors/code4romania/whos-who.svg?style=for-the-badge)](https://github.com/code4romania/whos-who/graphs/contributors) [![GitHub last commit](https://img.shields.io/github/last-commit/code4romania/whos-who.svg?style=for-the-badge)](https://github.com/code4romania/whos-who/commits/master) [![License: MPL 2.0](https://img.shields.io/badge/license-MPL%202.0-brightgreen.svg?style=for-the-badge)](https://opensource.org/licenses/MPL-2.0)
+[![GitHub contributors](https://img.shields.io/github/contributors/code4romania/whos-who.svg?style=for-the-badge)](https://github.com/code4romania/whos-who/graphs/contributors) [![GitHub last commit](https://img.shields.io/github/last-commit/code4romania/whos-who.svg?style=for-the-badge)](https://github.com/code4romania/whos-who/commits/develop) [![License: MPL 2.0](https://img.shields.io/badge/license-MPL%202.0-brightgreen.svg?style=for-the-badge)](https://opensource.org/licenses/MPL-2.0)
 
 **Objective:** Inform the public on what are the attributions of various institutions during the crisis situation.
 
