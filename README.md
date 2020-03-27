@@ -4,7 +4,7 @@
 
 **Objective:** Inform the public on what are the attributions of various institutions during the crisis situation.
 
-[Contributing](#contributing) | [Built with](#built-with) | [Repos and projects](#repos-and-projects) | [Deployment](#deployment) | [Feedback](#feedback) | [License](#license) | [About Code4Ro](#about-code4ro)
+[Contributing](#contributing) | [Built with](#built-with) | [Repos and projects](#repos-and-projects) | [Deployment](#local-deployment) | [Feedback](#feedback) | [License](#license) | [About Code4Ro](#about-code4ro)
 
 ## Contributing
 
@@ -37,11 +37,81 @@ You can also list any pending features and planned improvements for the project 
 - Fork this repo
 - Clone your fork
 - Open the directory where you have cloned the repo
-- And then follow [these](/frontend/README.md#Development) instructions
 
-## Deployment
+## Local Deployment
 
-TBD
+### System Requirements
+
+- Node.js 10 or later
+
+### Install node dependencies
+
+```sh
+npm install
+```
+
+### Run the app in the development mode
+
+```sh
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The page will reload if you make edits.
+
+You will also see any lint errors in the console.
+
+### Run the tests
+
+```sh
+npm test
+```
+
+Launches the test runner in the interactive watch mode.
+
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### Build the app
+
+```sh
+npm run build
+```
+
+Builds the app for production to the `build` folder.
+
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.
+
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: <https://facebook.github.io/create-react-app/docs/code-splitting>
+
+### Analyzing the Bundle Size
+
+This section has moved here: <https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size>
+
+### Advanced Configuration
+
+This section has moved here: <https://facebook.github.io/create-react-app/docs/advanced-configuration>
+
+### Deployment
+
+This section has moved here: <https://facebook.github.io/create-react-app/docs/deployment>
+
+### `npm run build` fails to minify
+
+This section has moved here: <https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify>
 
 ## Feedback
 

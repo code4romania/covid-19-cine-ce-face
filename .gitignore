@@ -4,6 +4,7 @@
 # Editors
 .vscode
 .idea
+.editorconfig
 
 # Logs
 logs
@@ -12,8 +13,9 @@ npm-debug.log*
 **/*.backup.*
 **/*.back.*
 
-# Dependency directories
-*/node_modules/
+# Dependencies
+.nvmrc
+node_modules/
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-frontend/build
+build
