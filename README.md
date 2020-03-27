@@ -1,12 +1,8 @@
-# Project name
+# Who's Who
 
-[![GitHub contributors](https://img.shields.io/github/contributors/code4romania/standard-repo-template.svg?style=for-the-badge)](https://github.com/code4romania/standard-repo-template/graphs/contributors) [![GitHub last commit](https://img.shields.io/github/last-commit/code4romania/standard-repo-template.svg?style=for-the-badge)](https://github.com/code4romania/standard-repo-template/commits/master) [![License: MPL 2.0](https://img.shields.io/badge/license-MPL%202.0-brightgreen.svg?style=for-the-badge)](https://opensource.org/licenses/MPL-2.0)
+[![GitHub contributors](https://img.shields.io/github/contributors/code4romania/whos-who.svg?style=for-the-badge)](https://github.com/code4romania/whos-who/graphs/contributors) [![GitHub last commit](https://img.shields.io/github/last-commit/code4romania/whos-who.svg?style=for-the-badge)](https://github.com/code4romania/whos-who/commits/master) [![License: MPL 2.0](https://img.shields.io/badge/license-MPL%202.0-brightgreen.svg?style=for-the-badge)](https://opensource.org/licenses/MPL-2.0)
 
-Insert bullets description of the project if available.
-
-[See the project live](insert_link_here)
-
-Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project.
+**Objective:** Inform the public on what are the attributions of various institutions during the crisis situation.
 
 [Contributing](#contributing) | [Built with](#built-with) | [Repos and projects](#repos-and-projects) | [Deployment](#deployment) | [Feedback](#feedback) | [License](#license) | [About Code4Ro](#about-code4ro)
 
@@ -20,34 +16,39 @@ You can also list any pending features and planned improvements for the project 
 
 ### Programming languages
 
-### Platforms
+- JavaScript
 
 ### Frontend framework
 
+- [React (16.13.*)](https://reactjs.org/)
+- [Bulma (0.8.*)](https://bulma.io/)
+
 ### Package managers
 
-### Database technology & provider
+- Frontend - [NPM](https://docs.npmjs.com/)
 
 ## Repos and projects
 
-Mention all related repos and projects.
+Uses reusable components from: <https://www.npmjs.com/package/@code4ro/taskforce-fe-components>
+Uses graphical assets from: <https://github.com/code4romania/covid-assets>
+
+## Development
+
+- Fork this repo
+- Clone your fork
+- Open the directory where you have cloned the repo
+- And then follow [these](/frontend/README.md#Development) instructions
 
 ## Deployment
 
-Guide users through getting your code up and running on their own system. In this section you can talk about:
-1. Installation process
-2. Software dependencies
-3. Latest releases
-4. API references
-
-Describe and show how to build your code and run the tests.
+TBD
 
 ## Feedback
 
-* Request a new feature on GitHub.
-* Vote for popular feature requests.
-* File a bug in GitHub Issues.
-* Email us with other feedback contact@code4.ro
+- Request a new feature on GitHub.
+- Vote for popular feature requests.
+- File a bug in GitHub Issues.
+- Email us with other feedback contact@code4.ro
 
 ## License
 
