@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./styles.scss";
 
 const CHART_URL = "https://public.flourish.studio/resources/embed.js";
-const CHART_DATA_SOURCE = "visualisation/1710354"; // TODO replace with real data source
+const CHART_DATA_SOURCE = "visualisation/1711865"; // TODO replace with real data source
 
 const ChartContainer = () => {
   useEffect(() => {
