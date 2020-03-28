@@ -17,15 +17,6 @@ const FooterWrapper = () => {
         </FooterLinkItem>
         <FooterLinkItem>
           <a
-            href="https://stirioficiale.ro/informatii"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Știri Oficiale
-          </a>
-        </FooterLinkItem>
-        <FooterLinkItem>
-          <a
             href="https://www.gov.ro/"
             target="_blank"
             rel="noopener noreferrer"
@@ -39,7 +30,52 @@ const FooterWrapper = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Departamentul pentru Situații de Urgență
+            Departamentul pentru <br />
+            Situații de Urgență
+          </a>
+        </FooterLinkItem>
+        <FooterLinkItem>
+          <a href="http://www.ms.ro/" target="_blank" rel="noopener noreferrer">
+            Ministerul Sănătății
+          </a>
+        </FooterLinkItem>
+      </FooterLinks>
+      <FooterLinks>
+        <FooterLinkHeader>&nbsp;</FooterLinkHeader>
+        <FooterLinkItem>
+          <a
+            href="https://stirioficiale.ro/informatii"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Știri Oficiale
+          </a>
+        </FooterLinkItem>
+        <FooterLinkItem>
+          <a
+            href="https://cetrebuiesafac.ro/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ce trebuie să fac
+          </a>
+        </FooterLinkItem>
+        <FooterLinkItem>
+          <a
+            href="https://datelazi.ro/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Date la zi
+          </a>
+        </FooterLinkItem>
+        <FooterLinkItem>
+          <a
+            href="https://rohelp.ro/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            RoHelp
           </a>
         </FooterLinkItem>
         <FooterLinkItem>
