@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
+
 import ContentPage from "../ContentPage";
+import ChartContainer from "../ChartContainer";
+import LineSeparator from "../LineSeparator";
+
 import data from "../../data/static-pages";
 import {
   Hero,
@@ -16,8 +20,9 @@ import {
   renderInstrumentItem,
   remapInstrumentsData
 } from "../../utils/instruments.utils";
-import "./styles.scss";
 import { mailchimpURL } from "../../config/mailchimp";
+
+import "./styles.scss";
 
 const Home = () => {
   const [selectedPage, setSelectedPage] = useState(null);
@@ -66,6 +71,12 @@ const Home = () => {
           }
         />
       </div>
+
+      <div className="container">
+        <ChartContainer />
+        <LineSeparator width="70%" />
+      </div>
+
       <div className="container pages-list">
         <List columns={3}>
           {data.map(doc => (
