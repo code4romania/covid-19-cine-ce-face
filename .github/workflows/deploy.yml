@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - master
-      - deploy
+      - develop
 
 env:
   PATHS: "/*"
@@ -33,12 +33,18 @@ jobs:
         run: npm run build
 
       - name: Deploy to S3 Staging
-        if: github.ref == 'refs/heads/deploy'
+        if: github.ref == 'refs/heads/develop'
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
           args: --acl public-read --delete
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_STAGE }}
+      
+      - name: Invalidate Cloudfront Staging
+        if: github.ref == 'refs/heads/develop'
+        uses: muratiger/invalidate-cloudfront-and-wait-for-completion-action@master
+        env:
+          DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID_STAGE }}
 
       - name: Deploy to S3 Production
         if: github.ref == 'refs/heads/master'
@@ -47,3 +53,9 @@ jobs:
           args: --acl public-read --delete
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET_PROD }}
+
+      - name: Invalidate Cloudfront Production
+        if: github.ref == 'refs/heads/master'
+        uses: muratiger/invalidate-cloudfront-and-wait-for-completion-action@master
+        env:
+          DISTRIBUTION_ID: ${{ secrets.DISTRIBUTION_ID_PROD }}
