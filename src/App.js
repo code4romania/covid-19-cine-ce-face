@@ -13,9 +13,11 @@ import {
   Header,
   DevelopedBy,
   IncubatedBy,
-  Banner
+  Banner,
+  Logo
 } from "@code4ro/taskforce-fe-components";
 import LogoSvg from "./images/logo.svg";
+import patriaBank from "./images/patria-bank.png";
 import "./App.scss";
 
 const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
@@ -24,10 +26,16 @@ const TermsAndConditions = lazy(() =>
 );
 const FooterWrapper = lazy(() => import("./components/Footer"));
 
-const Logo = () => (
+const AppLogo = () => (
   <Link to="/">
     <img width="178" height="32" alt="Covid-19. Cine-i cine?" src={LogoSvg} />
   </Link>
+);
+
+const incubatedByPartner = (
+  <Logo url="https://www.patriabank.ro/" key="patria-bank">
+    <img src={patriaBank} alt="Patria Bank" />
+  </Logo>
 );
 
 const MenuItems = [
@@ -78,7 +86,7 @@ const App = () => {
         title="15 RECOMANDĂRI privind conduita socială responsabilă în prevenirea răspândirii coronavirus. "
         link="https://stirioficiale.ro/15-recomandari-privind-conduita-sociala-responsabila-in-prevenirea-raspandirii-coronavirus"
       />
-      <Header Logo={Logo()} MenuItems={MenuItems} />
+      <Header Logo={AppLogo()} MenuItems={MenuItems} />
       <DevelopedBy showSecondLine={true} />
       <Suspense fallback={<div></div>}>
         <main>
@@ -94,7 +102,7 @@ const App = () => {
             </Route>
           </Switch>
         </main>
-        <IncubatedBy />
+        <IncubatedBy partnerLogos={incubatedByPartner} />
         <FooterWrapper />
       </Suspense>
     </>
