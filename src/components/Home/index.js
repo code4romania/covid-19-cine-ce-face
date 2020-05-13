@@ -8,10 +8,10 @@ import data from "../../data/static-pages";
 import {
   Hero,
   Instruments,
-  List,
-  ListItem,
-  SidebarMenu,
-  SidebarMenuItem,
+  // List,
+  // ListItem,
+  // SidebarMenu,
+  // SidebarMenuItem,
   MailchimpSubscribe
 } from "@code4ro/taskforce-fe-components";
 import UsefulApps from "../../data/useful-apps";
@@ -51,11 +51,11 @@ const Home = () => {
     }
   }, [pageSlug, subPageSlug, history]);
 
-  const navigate = slug => {
-    // Fix SecurityError of pushState on History
-    // Edge case for the `/` slug
-    history.push(`/${slug !== "/" ? slug : ""}`);
-  };
+  // const navigate = slug => {
+  //   // Fix SecurityError of pushState on History
+  //   // Edge case for the `/` slug
+  //   history.push(`/${slug !== "/" ? slug : ""}`);
+  // };
 
   const instrumentsData = remapInstrumentsData(UsefulApps);
 
@@ -81,7 +81,7 @@ const Home = () => {
         />
       </div>
 
-      <div className="container pages-list">
+      {/* <div className="container pages-list">
         <List columns={3}>
           {data.map(doc => (
             <ListItem
@@ -93,12 +93,12 @@ const Home = () => {
             />
           ))}
         </List>
-      </div>
+      </div> */}
 
       <div className="container">
         <div className="columns homepage-columns">
           <aside className="column is-4 homepage-sidebar">
-            <SidebarMenu>
+            {/* <SidebarMenu>
               {data.map(doc => {
                 let menuItems = null;
                 if (doc.content.length > 1) {
@@ -133,7 +133,7 @@ const Home = () => {
                   </div>
                 );
               })}
-            </SidebarMenu>
+            </SidebarMenu> */}
 
             <div className="instruments-wrapper">
               <Hero title={"Instrumente utile"} useFallbackIcon={true} />
