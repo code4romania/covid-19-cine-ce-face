@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 
 import ContentPage from "../ContentPage";
-import ChartContainer from "../ChartContainer";
+// import ChartContainer from "../ChartContainer";
 import LineSeparator from "../LineSeparator";
 
 import data from "../../data/static-pages";
@@ -73,7 +73,7 @@ const Home = () => {
       </div>
 
       <div className="container">
-        <ChartContainer />
+        {/* <ChartContainer /> */}
         <LineSeparator width="70%" />
       </div>
 
