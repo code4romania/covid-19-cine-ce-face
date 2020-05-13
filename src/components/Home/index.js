@@ -3,7 +3,6 @@ import { useParams, useHistory } from "react-router-dom";
 
 import ContentPage from "../ContentPage";
 // import ChartContainer from "../ChartContainer";
-import LineSeparator from "../LineSeparator";
 
 import data from "../../data/static-pages";
 import {
@@ -80,11 +79,6 @@ const Home = () => {
             </React.Fragment>
           }
         />
-      </div>
-
-      <div className="container">
-        {/* <ChartContainer /> */}
-        <LineSeparator width="70%" />
       </div>
 
       <div className="container pages-list">
