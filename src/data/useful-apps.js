@@ -95,7 +95,7 @@ export default [
     app_type: "DIASPORA",
     content: null,
     buttons: [
-      {
+      { 
         title: "Intră pe DiasporaHub",
         link: "https://diasporahub.ro"
       }
