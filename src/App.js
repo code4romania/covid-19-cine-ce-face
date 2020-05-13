@@ -18,7 +18,6 @@ import {
 import LogoSvg from "./images/logo.svg";
 import "./App.scss";
 
-const About = lazy(() => import("./components/About"));
 const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
 const TermsAndConditions = lazy(() =>
   import("./components/TermsAndConditions")
@@ -39,10 +38,7 @@ const MenuItems = [
     key={"stiri"}
   >
     Știri oficiale
-  </a>,
-  <Link to="/despre" key={"des"}>
-    Despre
-  </Link>
+  </a>
   /*,
   <a
     href="https://code4.ro/ro/apps/"
@@ -87,9 +83,6 @@ const App = () => {
       <Suspense fallback={<div></div>}>
         <main>
           <Switch>
-            <Route path="/despre">
-              <About />
-            </Route>
             <Route path="/politica-confidentialitate">
               <PrivacyPolicy />
             </Route>

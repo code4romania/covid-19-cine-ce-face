@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import {
   Footer,
   FooterLinkHeader,
@@ -12,9 +11,6 @@ const FooterWrapper = () => {
     <Footer>
       <FooterLinks>
         <FooterLinkHeader>Link-uri utile</FooterLinkHeader>
-        <FooterLinkItem>
-          <Link to="/despre">Despre proiect</Link>
-        </FooterLinkItem>
         <FooterLinkItem>
           <a
             href="https://www.gov.ro/"
