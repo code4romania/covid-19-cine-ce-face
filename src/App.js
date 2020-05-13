@@ -26,7 +26,7 @@ const FooterWrapper = lazy(() => import("./components/Footer"));
 
 const Logo = () => (
   <Link to="/">
-    <img width="178" height="32" alt="Covid-19. Cine-i cine?" src={LogoSvg} />
+    <img width="178" height="32" alt="Covid-19. Cine ce face?" src={LogoSvg} />
   </Link>
 );
 
