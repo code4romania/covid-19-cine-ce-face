@@ -59,7 +59,6 @@ const Home = () => {
   };
 
   const instrumentsData = remapInstrumentsData(UsefulApps);
-  const content= "”Cine ce face” este un proiect de informare prin care sperăm să ajutăm cetățenii să aibă o imagine cât mai clară și corectă asupra rolurilor diverșilor actori din societate în situația de pandemie cu care ne confruntăm. Proiectul este unul în continuă dezvoltare și vom completa informațiile în curând cu actorii internaționali și organizațiile neguvernamentale. Dacă observi orice neconcordanță, că lipsește un actor relevant, sau că informația este neclară, te rugăm să ne <a href=\"mailto:cineceface@code4.ro\">transmiți un e-mail.</a>";
 
   return (
     <>
@@ -68,7 +67,7 @@ const Home = () => {
           title={"Bine ai venit"}
           useFallbackIcon={true}
           subtitle={
-            content
+            "”Cine ce face” este un proiect de informare prin care sperăm să ajutăm cetățenii să aibă o imagine cât mai clară și corectă asupra rolurilor diverșilor actori din societate în situația de pandemie cu care ne confruntăm. Proiectul este unul în continuă dezvoltare și vom completa informațiile în curând cu actorii internaționali și organizațiile neguvernamentale. Dacă observi orice neconcordanță, că lipsește un actor relevant, sau că informația este neclară, te rugăm să ne transmiți un e-mail."
           }
         />
       </div>
