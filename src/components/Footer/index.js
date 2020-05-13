@@ -27,12 +27,12 @@ const FooterWrapper = () => {
           </a>
         </FooterLinkItem>
         <FooterLinkItem>
-          <Link to="/termeni-si-conditii-de-utilizare">
+          <Link to="/termeni-si-conditii">
             Termeni și condiții de utilizare
           </Link>
         </FooterLinkItem>
         <FooterLinkItem>
-          <Link to="/politica-de-confidentialitate">
+          <Link to="/politica-confidentialitate">
             Politică de confidențialitate
           </Link>
         </FooterLinkItem>
