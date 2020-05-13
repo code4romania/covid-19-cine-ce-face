@@ -13,7 +13,7 @@ import {
   Header,
   DevelopedBy,
   IncubatedBy,
-  Banner,
+  // Banner,
   Logo
 } from "@code4ro/taskforce-fe-components";
 import LogoSvg from "./images/logo.svg";
@@ -43,27 +43,42 @@ const MenuItems = [
     href="https://stirioficiale.ro"
     target="_blank"
     rel="noopener noreferrer"
-    key={"stiri"}
+    key={"stirioficiale"}
   >
     Știri oficiale
-  </a>
-  /*,
-  <a
-    href="https://code4.ro/ro/apps/"
-    target="_blank"
-    rel="noopener noreferrer"
-    key={"eco"}
-  >
-    Ecosistemul Covid-19
   </a>,
   <a
-    href="https://code4.ro/ro/doneaza/"
+    href="https://cetrebuiesafac.ro"
     target="_blank"
     rel="noopener noreferrer"
-    key={"don"}
+    key={"cetrebuiesafac"}
   >
-    Sprijină proiectul
-  </a> */
+    Ce trebuie să fac
+  </a>,
+  <a
+    href="https://datelazi.ro"
+    target="_blank"
+    rel="noopener noreferrer"
+    key={"datelazi"}
+  >
+    Date la zi
+  </a>,
+  <a
+    href="https://rohelp.ro/ro/"
+    target="_blank"
+    rel="noopener noreferrer"
+    key={"rohelp"}
+  >
+    RoHelp
+  </a>,
+  <a
+    href="https://diasporahub.ro"
+    target="_blank"
+    rel="noopener noreferrer"
+    key={"diasporahub"}
+  >
+    Diaspora Hub
+  </a>
 ];
 
 const AppWrapper = () => {
@@ -82,10 +97,10 @@ const App = () => {
 
   return (
     <>
-      <Banner
+      {/* <Banner
         title="15 RECOMANDĂRI privind conduita socială responsabilă în prevenirea răspândirii coronavirus. "
         link="https://stirioficiale.ro/15-recomandari-privind-conduita-sociala-responsabila-in-prevenirea-raspandirii-coronavirus"
-      />
+      /> */}
       <Header Logo={AppLogo()} MenuItems={MenuItems} />
       <DevelopedBy showSecondLine={true} />
       <Suspense fallback={<div></div>}>
