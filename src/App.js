@@ -102,7 +102,7 @@ const App = () => {
         link="https://stirioficiale.ro/15-recomandari-privind-conduita-sociala-responsabila-in-prevenirea-raspandirii-coronavirus"
       /> */}
       <Header Logo={AppLogo()} MenuItems={MenuItems} />
-      <DevelopedBy showSecondLine={true} />
+      <DevelopedBy showPartners={false} />
       <Suspense fallback={<div></div>}>
         <main>
           <Switch>

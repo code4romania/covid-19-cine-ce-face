@@ -3,7 +3,6 @@ import { useParams, useHistory } from "react-router-dom";
 
 import ContentPage from "../ContentPage";
 // import ChartContainer from "../ChartContainer";
-import LineSeparator from "../LineSeparator";
 
 import data from "../../data/static-pages";
 import {
@@ -70,11 +69,6 @@ const Home = () => {
             "Vrem să facem lucrurile mai simple pentru noi toți. Cineicine.ro este un ghid cu reguli de interacțiune, acțiune și comportament recomandate în timpul situației de urgență generată de pandemia COVID-19. Vrem să aducem mai aproape de voi regulile de bază recomandate de autorități de la care este indicat să nu ne abatem în această perioadă."
           }
         />
-      </div>
-
-      <div className="container">
-        {/* <ChartContainer /> */}
-        <LineSeparator width="70%" />
       </div>
 
       <div className="container pages-list">
