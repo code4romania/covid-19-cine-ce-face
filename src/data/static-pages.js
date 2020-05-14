@@ -201,6 +201,12 @@ export default [
         content: `
             <p>Primăriile și Direcțiile Generale de Asistență Socială și Protecția Copilului, asigură pe cât posibil, buna funcționare a serviciilor sociale mai ales pentru grupurile vulnerabile. Printre acestea se numără, în contextul epidemiologic actual, măsuri de livrare la domiciliu a pachetelor pentru beneficiarii cantinelor sociale și suplimentarea numărului de locuri din adăposturi pentru persoanele fără adăpost.</p>
         `
+      },
+      {
+        title: `Autoritatea Națională pentru Drepturile Persoanelor cu Dizabilități, Copii și Adoptii (ANDPDCA)`,
+        content: `
+            <p>Autoritatea Națională pentru Drepturile Persoanelor cu Dizabilități, Copii și Adopții este organul de specialitate al administrației publice centrale, cu personalitate juridică, în subordinea Ministerului Muncii și Protecției Sociale, constituită prin preluarea activităților, atribuțiilor și structurilor Autorității Naționale pentru Persoanele cu Dizabilități și ale Autorității Naționale pentru Protecția Drepturilor Copilului și Adopție, care s-a desființat. Rolul ANDPDCA, în timpul pandemiei, este de a furniza informație metodologică și consiliere pentru actorii care sunt implicați în bunăstarea copiilor și persoanelor cu dizabilități. ANDPDCA colaborează strâns cu DGASPC-urile.</p>
+        `
       }
     ]
   }
