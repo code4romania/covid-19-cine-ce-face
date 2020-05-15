@@ -11,10 +11,10 @@ function ContentPage({ page, subPage }) {
   const renderContent = () => {
     return (
       subPage &&
-      subPage.page && (
+      subPage.content && (
         <div
           className="content"
-          dangerouslySetInnerHTML={{ __html: subPage.page }}
+          dangerouslySetInnerHTML={{ __html: subPage.content }}
         />
       )
     );
@@ -75,7 +75,7 @@ ContentPage.propTypes = {
   }),
   subPage: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    page: PropTypes.string.isRequired
+    content: PropTypes.string.isRequired
   })
 };
 
