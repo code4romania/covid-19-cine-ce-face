@@ -50,6 +50,7 @@ const Home = () => {
     if (page) {
       // Find the subPage
       if (subPageSlug) {
+        // TODO: change `accordion` to `content` when moving to multiple categories/types of actors
         subPage = page.accordion.find(page => page.slug === subPageSlug);
       } else if (page.content.length) {
         [subPage] = page.content;
