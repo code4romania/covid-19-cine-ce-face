@@ -46,13 +46,10 @@ const SearchResults = ({ query, data = [], readMore }) => {
     keys: ["title", "searchText"]
   };
 
-  console.log("docs", docs);
-
   const searchQuery = normalize(query);
   const fuse = new Fuse(docs, options);
   const results = fuse.search(searchQuery);
-  //   const results = [];
-  console.log("results", results);
+
   return (
     <div className="search-results-container">
       <h1 className="results-description">
