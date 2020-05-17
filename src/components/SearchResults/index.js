@@ -17,7 +17,7 @@ const SearchResults = ({ query, data = [], readMore }) => {
 
   const docs = data[0].accordion.map(accordion => {
     return {
-      fullSlug: "/" + data[0].slug + "/" + accordion.slug,
+      fullSlug: `/${data[0].slug}/${accordion.slug}`,
       title: accordion.title,
       searchText: accordion.content
     };
