@@ -6,15 +6,16 @@ import {
   Accordion,
   SocialsShare
 } from "@code4ro/taskforce-fe-components";
+import LineSeparator from "../LineSeparator";
 
 function ContentPage({ page, subPage }) {
   const renderContent = () => {
     return (
       subPage &&
-      subPage.page && (
+      subPage.content && (
         <div
           className="content"
-          dangerouslySetInnerHTML={{ __html: subPage.page }}
+          dangerouslySetInnerHTML={{ __html: subPage.content }}
         />
       )
     );
@@ -26,6 +27,12 @@ function ContentPage({ page, subPage }) {
       <SocialsShare currentPage={window.location.href} />
       {renderContent()}
       {page.form && <Form data={page} />}
+      {subPage.content && (
+        <div className="content">
+          <LineSeparator />
+          <h4>Află mai multe:</h4>
+        </div>
+      )}
       {page.accordion &&
         page.accordion.map((accordion, index) => (
           <Accordion
@@ -75,7 +82,7 @@ ContentPage.propTypes = {
   }),
   subPage: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    page: PropTypes.string.isRequired
+    content: PropTypes.string.isRequired
   })
 };
 

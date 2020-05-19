@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams, useHistory } from "react-router-dom";
+import * as queryString from "query-string";
 
 import ContentPage from "../ContentPage";
+import SearchResults from "../SearchResults";
 // import ChartContainer from "../ChartContainer";
 
 import data from "../../data/static-pages";
@@ -12,24 +14,35 @@ import {
   // ListItem,
   // SidebarMenu,
   // SidebarMenuItem,
-  MailchimpSubscribe
+  MailchimpSubscribe,
+  SearchInput
 } from "@code4ro/taskforce-fe-components";
 import UsefulApps from "../../data/useful-apps";
 import {
   renderInstrumentItem,
-  remapInstrumentsData
+  remapInstrumentsData,
+  navigate
 } from "../../utils/instruments.utils";
 import { mailchimpURL } from "../../config/mailchimp";
 
 import "./styles.scss";
+
+const SEARCH_SLUG = "search";
 
 const Home = () => {
   const [selectedPage, setSelectedPage] = useState(null);
   const [selectedSubPage, setSelectedSubPage] = useState(null);
   const { pageSlug, subPageSlug } = useParams();
   const history = useHistory();
+  const scrollAnchorRef = useRef(null);
 
   useEffect(() => {
+    if (pageSlug === SEARCH_SLUG) {
+      setSelectedPage(undefined);
+      setSelectedSubPage(undefined);
+      return;
+    }
+
     // Find the page
     const page = data.find(doc => doc.slug === (pageSlug || "/"));
     let subPage = null;
@@ -37,7 +50,8 @@ const Home = () => {
     if (page) {
       // Find the subPage
       if (subPageSlug) {
-        subPage = page.content.find(page => page.slug === subPageSlug);
+        // TODO: change `accordion` to `content` when moving to multiple categories/types of actors
+        subPage = page.accordion.find(page => page.slug === subPageSlug);
       } else if (page.content.length) {
         [subPage] = page.content;
       }
@@ -57,11 +71,32 @@ const Home = () => {
   //   history.push(`/${slug !== "/" ? slug : ""}`);
   // };
 
+  const navigateToPage = slug => navigate(history, slug, scrollAnchorRef);
+  const triggerSearch = query => {
+    if (!query) {
+      return;
+    }
+    navigateToPage("/search?q=" + query);
+  };
+
   const instrumentsData = remapInstrumentsData(UsefulApps);
+  // get the search query from the url
+  const queryParams = queryString.parse(history.location.search);
+  const searchQuery = queryParams.q;
 
   return (
     <>
       <div className="container">
+        <div className="level-right">
+          <div className="search-input">
+            <SearchInput
+              placeholder="Caută informații aici"
+              value={searchQuery}
+              onEnter={triggerSearch}
+              onClick={triggerSearch}
+            ></SearchInput>
+          </div>
+        </div>
         <Hero
           title={"Bine ai venit"}
           useFallbackIcon={true}
@@ -149,7 +184,14 @@ const Home = () => {
               <MailchimpSubscribe url={mailchimpURL} compact={true} />
             </div>
           </aside>
-          <div className="column is-8">
+          <div ref={scrollAnchorRef} className="column is-8">
+            {!selectedPage && searchQuery && (
+              <SearchResults
+                query={searchQuery}
+                data={data}
+                readMore={navigateToPage}
+              />
+            )}
             {selectedPage && (
               <ContentPage
                 page={selectedPage}
