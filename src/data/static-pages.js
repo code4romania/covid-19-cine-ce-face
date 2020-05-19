@@ -137,7 +137,7 @@ export default [
         `
       },
       {
-        title: "Inspectoratul General al Politiei de Frontiera",
+        title: "Inspectoratul General al Poliției de Frontieră",
         slug: "igpf",
         display_order: 15,
         content: `
