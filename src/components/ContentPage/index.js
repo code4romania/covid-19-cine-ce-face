@@ -4,7 +4,7 @@ import Form from "../Form";
 import {
   Hero,
   Accordion,
-  SocialsShare
+  SocialsShare,
 } from "@code4ro/taskforce-fe-components";
 import LineSeparator from "../LineSeparator";
 
@@ -56,7 +56,7 @@ ContentPage.propTypes = {
     content: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
-        page: PropTypes.string.isRequired
+        page: PropTypes.string.isRequired,
       })
     ),
     first_node_id: PropTypes.number,
@@ -68,22 +68,22 @@ ContentPage.propTypes = {
         options: PropTypes.arrayOf(
           PropTypes.shape({
             label: PropTypes.string.isRequired,
-            value: PropTypes.number.isRequired
+            value: PropTypes.number.isRequired,
           })
-        )
+        ),
       })
     ),
     accordion: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
-        content: PropTypes.string.isRequired
+        content: PropTypes.string.isRequired,
       })
-    )
+    ),
   }),
   subPage: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    content: PropTypes.string.isRequired
-  })
+    content: PropTypes.string.isRequired,
+  }),
 };
 
 export default ContentPage;

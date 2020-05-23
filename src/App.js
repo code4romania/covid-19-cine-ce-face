@@ -4,7 +4,7 @@ import {
   Link,
   Route,
   Switch,
-  useHistory
+  useHistory,
 } from "react-router-dom";
 import { logPageView } from "./analyticsTracker";
 import Home from "./components/Home";
@@ -14,7 +14,7 @@ import {
   DevelopedBy,
   IncubatedBy,
   // Banner,
-  Logo
+  Logo,
 } from "@code4ro/taskforce-fe-components";
 import LogoSvg from "./images/logo.svg";
 import patriaBank from "./images/patria-bank.png";
@@ -78,7 +78,7 @@ const MenuItems = [
     key={"diasporahub"}
   >
     Diaspora Hub
-  </a>
+  </a>,
 ];
 
 const AppWrapper = () => {

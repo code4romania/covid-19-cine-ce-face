@@ -12,14 +12,14 @@ const LineSeparator = ({ width, margin = "50px" }) => (
       backgroundColor: "#E5E5E5",
       height: 1,
       margin: `${margin} auto`,
-      width
+      width,
     }}
   />
 );
 
 LineSeparator.propTypes = {
   width: PropTypes.string.isRequired,
-  margin: PropTypes.string
+  margin: PropTypes.string,
 };
 
 export default LineSeparator;

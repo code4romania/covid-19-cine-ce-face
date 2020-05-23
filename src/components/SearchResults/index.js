@@ -8,18 +8,18 @@ const SearchResults = ({ query, data = [], readMore }) => {
   /**
    * remove diacritics and turn all to lowercase
    */
-  const normalize = text => {
+  const normalize = (text) => {
     return text
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase();
   };
 
-  const docs = data[0].accordion.map(accordion => {
+  const docs = data[0].accordion.map((accordion) => {
     return {
       fullSlug: `/${data[0].slug}/${accordion.slug}`,
       title: accordion.title,
-      searchText: accordion.content
+      searchText: accordion.content,
     };
   });
 
@@ -43,7 +43,7 @@ const SearchResults = ({ query, data = [], readMore }) => {
     threshold,
     distance: 100000,
     minMatchCharLength: 1,
-    keys: ["title", "searchText"]
+    keys: ["title", "searchText"],
   };
 
   const searchQuery = normalize(query);
@@ -76,7 +76,7 @@ const SearchResults = ({ query, data = [], readMore }) => {
 SearchResults.propTypes = {
   query: PropTypes.string.isRequired,
   data: PropTypes.array.isRequired,
-  readMore: PropTypes.func
+  readMore: PropTypes.func,
 };
 
 export default SearchResults;

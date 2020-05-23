@@ -4,7 +4,7 @@ import {
   Footer,
   FooterLinkHeader,
   FooterLinkItem,
-  FooterLinks
+  FooterLinks,
 } from "@code4ro/taskforce-fe-components";
 
 const FooterWrapper = () => {
