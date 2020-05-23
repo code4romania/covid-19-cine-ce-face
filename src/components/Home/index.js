@@ -15,13 +15,13 @@ import {
   // SidebarMenu,
   // SidebarMenuItem,
   MailchimpSubscribe,
-  SearchInput
+  SearchInput,
 } from "@code4ro/taskforce-fe-components";
 import UsefulApps from "../../data/useful-apps";
 import {
   renderInstrumentItem,
   remapInstrumentsData,
-  navigate
+  navigate,
 } from "../../utils/instruments.utils";
 import { mailchimpURL } from "../../config/mailchimp";
 
@@ -44,14 +44,14 @@ const Home = () => {
     }
 
     // Find the page
-    const page = data.find(doc => doc.slug === (pageSlug || "/"));
+    const page = data.find((doc) => doc.slug === (pageSlug || "/"));
     let subPage = null;
 
     if (page) {
       // Find the subPage
       if (subPageSlug) {
         // TODO: change `accordion` to `content` when moving to multiple categories/types of actors
-        subPage = page.accordion.find(page => page.slug === subPageSlug);
+        subPage = page.accordion.find((page) => page.slug === subPageSlug);
       } else if (page.content.length) {
         [subPage] = page.content;
       }
@@ -71,8 +71,8 @@ const Home = () => {
   //   history.push(`/${slug !== "/" ? slug : ""}`);
   // };
 
-  const navigateToPage = slug => navigate(history, slug, scrollAnchorRef);
-  const triggerSearch = query => {
+  const navigateToPage = (slug) => navigate(history, slug, scrollAnchorRef);
+  const triggerSearch = (query) => {
     if (!query) {
       return;
     }
@@ -173,8 +173,8 @@ const Home = () => {
             <div className="instruments-wrapper">
               <Hero title={"Instrumente utile"} useFallbackIcon={true} />
               <Instruments layout="column">
-                {Object.keys(instrumentsData).map(category => {
-                  return instrumentsData[category].map(usefulApp =>
+                {Object.keys(instrumentsData).map((category) => {
+                  return instrumentsData[category].map((usefulApp) =>
                     renderInstrumentItem(usefulApp)
                   );
                 })}
