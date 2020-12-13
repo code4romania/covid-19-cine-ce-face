@@ -5,7 +5,7 @@
   "description": "Explicarea rolului și subordonarea instituțiilor în timpul stării de urgență.",
   "private": true,
   "dependencies": {
-    "@code4ro/taskforce-fe-components": "^1.0.28",
+    "@code4ro/taskforce-fe-components": "^2.0.1",
     "bulma": "^0.8.0",
     "fuse.js": "^6.0.0",
     "query-string": "^6.12.1",
