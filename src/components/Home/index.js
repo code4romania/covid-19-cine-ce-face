@@ -9,6 +9,7 @@ import SearchResults from "../SearchResults";
 import data from "../../data/static-pages";
 import {
   Hero,
+  BannerImage,
   Instruments,
   // List,
   // ListItem,
@@ -26,6 +27,7 @@ import {
 import { mailchimpURL } from "../../config/mailchimp";
 
 import "./styles.scss";
+import rovaccinareImage from "../../images/rovaccinare.jpg";
 
 const SEARCH_SLUG = "search";
 
@@ -172,6 +174,14 @@ const Home = () => {
 
             <div className="instruments-wrapper">
               <Hero title={"Instrumente utile"} useFallbackIcon={true} />
+              <BannerImage
+                link="https://vaccinare-covid.gov.ro/"
+                image={{
+                  src: rovaccinareImage,
+                  alt: "#ROVACCINARE",
+                  title: "#ROVACCINARE",
+                }}
+              />
               <Instruments layout="column">
                 {Object.keys(instrumentsData).map((category) => {
                   return instrumentsData[category].map((usefulApp) =>
