@@ -1,0 +1,29 @@
+.is-uppercase {
+  text-transform: uppercase !important;
+}
+
+.dropdown {
+  justify-content: flex-end;
+  margin: 0 10px;
+
+  .dropdown-menu {
+    min-width: unset;
+
+    .dropdown-item {
+      cursor: pointer;
+      margin: 0;
+
+      &:hover {
+        background-color: #fafafa;
+      }
+
+      &.is-active {
+        background-color: #ffde59;
+      }
+    }
+  }
+}
+
+.dropdown-trigger .button {
+  height: 1.5rem;
+}

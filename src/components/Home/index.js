@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import * as queryString from "query-string";
+import { Trans } from "@lingui/macro";
 
 import ContentPage from "../ContentPage";
 import SearchResults from "../SearchResults";
@@ -100,7 +101,7 @@ const Home = () => {
           </div>
         </div>
         <Hero
-          title={"Bine ai venit"}
+          title={<Trans>Bine ai venit</Trans>}
           useFallbackIcon={true}
           subtitle={
             <React.Fragment>

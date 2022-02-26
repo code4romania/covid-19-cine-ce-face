@@ -8,6 +8,10 @@ import {
 } from "react-router-dom";
 import { logPageView } from "./analyticsTracker";
 import Home from "./components/Home";
+import { I18nProvider } from "@lingui/react";
+import { i18n } from "@lingui/core";
+import { en, ro, uk, ru } from "make-plural/plurals";
+import { messages as messagesRo } from "./locales/ro/messages";
 
 import {
   Header,
@@ -19,12 +23,24 @@ import {
 import LogoSvg from "./images/logo.svg";
 import patriaBank from "./images/patria-bank.png";
 import "./App.scss";
+import { LanguageMenu } from "./components/LanguageMenu";
 
 const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
 const TermsAndConditions = lazy(() =>
   import("./components/TermsAndConditions")
 );
 const FooterWrapper = lazy(() => import("./components/Footer"));
+
+i18n.loadLocaleData({
+  en: { plurals: en },
+  ro: { plurals: ro },
+  uk: { plurals: uk },
+  ru: { plurals: ru },
+});
+i18n.load({
+  ro: messagesRo,
+});
+i18n.activate("ro");
 
 const AppLogo = () => (
   <Link to="/">
@@ -79,13 +95,16 @@ const MenuItems = [
   >
     Diaspora Hub
   </a>,
+  <LanguageMenu key="language" />,
 ];
 
 const AppWrapper = () => {
   return (
-    <Router>
-      <App />
-    </Router>
+    <I18nProvider i18n={i18n} forceRenderOnLocaleChange={false}>
+      <Router>
+        <App />
+      </Router>
+    </I18nProvider>
   );
 };
 

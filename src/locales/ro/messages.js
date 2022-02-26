@@ -1,0 +1,1 @@
+/*eslint-disable*/module.exports={messages:{"Bine ai venit":"Bine ai venit"}};

@@ -1,0 +1,12 @@
+{
+  "Bine ai venit": {
+    "translation": "Ласкаво просимо",
+    "origin": [
+      [
+        "components/Home/index.js",
+        104
+      ]
+    ],
+    "extractedComments": []
+  }
+}
