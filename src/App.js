@@ -23,6 +23,7 @@ import {
 import LogoSvg from "./images/logo.svg";
 import patriaBank from "./images/patria-bank.png";
 import "./App.scss";
+import { LanguageMenu } from "./components/LanguageMenu";
 
 const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
 const TermsAndConditions = lazy(() =>
@@ -94,6 +95,7 @@ const MenuItems = [
   >
     Diaspora Hub
   </a>,
+  <LanguageMenu key="language" />,
 ];
 
 const AppWrapper = () => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { InstrumentsItem } from "@code4ro/taskforce-fe-components";
+import { i18n } from "@lingui/core";
 
 const hasButtons = (buttons) => {
   return buttons && buttons.length;
@@ -66,4 +67,10 @@ const navigate = (history, slug, anchor) => {
   scrollRefIntoView(anchor);
 };
 
-export { renderInstrumentItem, remapInstrumentsData, navigate };
+const changeLanguage = async (locale) => {
+  const { messages } = await import(`../locales/${locale}/messages`);
+  i18n.load(locale, messages);
+  i18n.activate(locale);
+};
+
+export { changeLanguage, renderInstrumentItem, remapInstrumentsData, navigate };
