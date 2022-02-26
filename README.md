@@ -105,7 +105,27 @@ import { Trans } from "@lingui/macro";
 
 `npm run extract`
 
-3. Compiling messages
+3. Add translations to `messages.json` for each language from the `locales` folder.
+
+```json
+// en/messages.json
+{
+  "Știri oficiale": {
+    "translation": "Official news"
+    // ...
+  }
+}
+
+// ro/messages.json
+{
+  "Știri oficiale": {
+    "translation": "Știri oficiale"
+    // ...
+  }
+}
+```
+
+4. Compiling messages
 
 `npm run compile`
 
