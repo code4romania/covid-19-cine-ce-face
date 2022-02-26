@@ -91,6 +91,26 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
+### Using lingui
+
+1. Wrapping texts using `<Trans>` component.
+
+```js
+import { Trans } from "@lingui/macro";
+
+<Trans>Hello world</Trans>;
+```
+
+2. Extracting messages
+
+`npm run extract`
+
+3. Compiling messages
+
+`npm run compile`
+
+See more details on the official lingui [page](https://lingui.js.org/tutorials/react.html)
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
