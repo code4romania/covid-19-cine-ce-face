@@ -7,6 +7,7 @@ import {
   SocialsShare,
 } from "@code4ro/taskforce-fe-components";
 import LineSeparator from "../LineSeparator";
+import { Trans } from "@lingui/macro";
 
 function ContentPage({ page, subPage }) {
   const renderContent = () => {
@@ -30,19 +31,25 @@ function ContentPage({ page, subPage }) {
       {subPage.content && (
         <div className="content">
           <LineSeparator />
-          <h4>Află mai multe:</h4>
+          <h4>
+            <Trans>Află mai multe:</Trans>
+          </h4>
         </div>
       )}
       {page.accordion &&
-        page.accordion.map((accordion, index) => (
+        page.accordion.map(({ title, content: Content }, index) => (
           <Accordion
             key={`accordion_${index}`}
-            title={accordion.title}
+            title={title}
             content={
               <div
                 className="content"
-                dangerouslySetInnerHTML={{ __html: accordion.content }}
-              />
+                // dangerouslySetInnerHTML={{
+                //   __html: accordion.content,
+                // }}
+              >
+                <Content />
+              </div>
             }
           />
         ))}

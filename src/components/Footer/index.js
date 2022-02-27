@@ -6,15 +6,18 @@ import {
   FooterLinkItem,
   FooterLinks,
 } from "@code4ro/taskforce-fe-components";
+import { Trans } from "@lingui/macro";
 
 const FooterWrapper = () => {
   return (
     <Footer>
       <FooterLinks>
-        <FooterLinkHeader>Link-uri utile</FooterLinkHeader>
+        <FooterLinkHeader>
+          <Trans>Link-uri utile</Trans>
+        </FooterLinkHeader>
         <FooterLinkItem>
           <a href="https://code4.ro/" target="_blank" rel="noopener noreferrer">
-            Code for Romania
+            <Trans>Code for Romania</Trans>
           </a>
         </FooterLinkItem>
         <FooterLinkItem>
@@ -23,17 +26,17 @@ const FooterWrapper = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Codul sursă în GitHub
+            <Trans>Codul sursă în GitHub</Trans>
           </a>
         </FooterLinkItem>
         <FooterLinkItem>
           <Link to="/termeni-si-conditii">
-            Termeni și condiții de utilizare
+            <Trans>Termeni și condiții de utilizare</Trans>
           </Link>
         </FooterLinkItem>
         <FooterLinkItem>
           <Link to="/politica-confidentialitate">
-            Politică de confidențialitate
+            <Trans>Politică de confidențialitate</Trans>
           </Link>
         </FooterLinkItem>
         <FooterLinkItem>
@@ -42,7 +45,7 @@ const FooterWrapper = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Contact
+            <Trans>Contact</Trans>
           </a>
         </FooterLinkItem>
       </FooterLinks>

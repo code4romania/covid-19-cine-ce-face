@@ -12,6 +12,7 @@ import { I18nProvider } from "@lingui/react";
 import { i18n } from "@lingui/core";
 import { en, ro, uk, ru } from "make-plural/plurals";
 import { messages as messagesRo } from "./locales/ro/messages";
+import { Trans } from "@lingui/macro";
 
 import {
   Header,
@@ -61,7 +62,7 @@ const MenuItems = [
     rel="noopener noreferrer"
     key={"stirioficiale"}
   >
-    Știri oficiale
+    <Trans>Știri oficiale</Trans>
   </a>,
   <a
     href="https://cetrebuiesafac.ro"
@@ -69,7 +70,7 @@ const MenuItems = [
     rel="noopener noreferrer"
     key={"cetrebuiesafac"}
   >
-    Ce trebuie să fac
+    <Trans>Ce trebuie să fac</Trans>
   </a>,
   <a
     href="https://datelazi.ro"
@@ -77,7 +78,7 @@ const MenuItems = [
     rel="noopener noreferrer"
     key={"datelazi"}
   >
-    Date la zi
+    <Trans>Date la zi</Trans>
   </a>,
   <a
     href="https://rohelp.ro/ro/"
@@ -85,7 +86,7 @@ const MenuItems = [
     rel="noopener noreferrer"
     key={"rohelp"}
   >
-    RoHelp
+    <Trans>RoHelp</Trans>
   </a>,
   <a
     href="https://diasporahub.ro"
@@ -93,7 +94,7 @@ const MenuItems = [
     rel="noopener noreferrer"
     key={"diasporahub"}
   >
-    Diaspora Hub
+    <Trans>Diaspora Hub</Trans>
   </a>,
   <LanguageMenu key="language" />,
 ];

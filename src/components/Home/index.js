@@ -93,7 +93,7 @@ const Home = () => {
         <div className="level-right">
           <div className="search-input">
             <SearchInput
-              placeholder="Caută informații aici"
+              placeholder={<Trans>Caută informații aici</Trans>}
               value={searchQuery}
               onEnter={triggerSearch}
               onClick={triggerSearch}
@@ -105,15 +105,17 @@ const Home = () => {
           useFallbackIcon={true}
           subtitle={
             <React.Fragment>
-              ”Cine ce face” este un proiect de informare prin care sperăm să
-              ajutăm cetățenii să aibă o imagine cât mai clară și corectă asupra
-              rolurilor diverșilor actori din societate în situația de pandemie
-              cu care ne confruntăm. Proiectul este unul în continuă dezvoltare
-              și vom completa informațiile în curând cu actorii internaționali
-              și organizațiile neguvernamentale. Dacă observi orice
-              neconcordanță, că lipsește un actor relevant, sau că informația
-              este neclară, te rugăm să ne{" "}
-              <a href="mailto:contact@code4.ro">transmiți un e-mail</a>.
+              <Trans>
+                ”Cine ce face” este un proiect de informare prin care sperăm să
+                ajutăm cetățenii să aibă o imagine cât mai clară și corectă
+                asupra rolurilor diverșilor actori din societate în situația de
+                pandemie cu care ne confruntăm. Proiectul este unul în continuă
+                dezvoltare și vom completa informațiile în curând cu actorii
+                internaționali și organizațiile neguvernamentale. Dacă observi
+                orice neconcordanță, că lipsește un actor relevant, sau că
+                informația este neclară, te rugăm să ne{" "}
+                <a href="mailto:contact@code4.ro">transmiți un e-mail</a>.
+              </Trans>
             </React.Fragment>
           }
         />
@@ -174,7 +176,10 @@ const Home = () => {
             </SidebarMenu> */}
 
             <div className="instruments-wrapper">
-              <Hero title={"Instrumente utile"} useFallbackIcon={true} />
+              <Hero
+                title={<Trans>Instrumente utile</Trans>}
+                useFallbackIcon={true}
+              />
               <BannerImage
                 link="https://vaccinare-covid.gov.ro/"
                 image={{
