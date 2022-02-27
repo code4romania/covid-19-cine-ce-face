@@ -5,6 +5,7 @@ import MultipleChoice from "./multipleChoice";
 import Results from "./results";
 import "./Form.scss";
 import { Button } from "@code4ro/taskforce-fe-components";
+import { Trans } from "@lingui/macro";
 
 function Form({ data }) {
   // TODO: at some point, allow for answers to some questions to affect the visibility of other questions
@@ -74,20 +75,22 @@ function Form({ data }) {
           {currentNode > 0 && (
             <div className="level-item">
               <Button inverted={true} onClick={goToPreviousQuestion}>
-                Inapoi
+                <Trans>Inapoi</Trans>
               </Button>
             </div>
           )}
           {currentNode < data.form.length - 1 && (
             <div className="level-item">
-              <Button onClick={goToNextQuestion}>Inainte</Button>
+              <Button onClick={goToNextQuestion}>
+                <Trans>Inainte</Trans>
+              </Button>
             </div>
           )}
         </div>
         <div className="level-right">
           {data.form && (
             <Button inverted={true} onClick={init}>
-              Reîncepe testul
+              <Trans>Reîncepe testul</Trans>
             </Button>
           )}
         </div>

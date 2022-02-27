@@ -8,6 +8,11 @@ import {
 } from "react-router-dom";
 import { logPageView } from "./analyticsTracker";
 import Home from "./components/Home";
+import { I18nProvider } from "@lingui/react";
+import { i18n } from "@lingui/core";
+import { en, ro, uk, ru } from "make-plural/plurals";
+import { messages as messagesRo } from "./locales/ro/messages";
+import { Trans } from "@lingui/macro";
 
 import {
   Header,
@@ -19,12 +24,24 @@ import {
 import LogoSvg from "./images/logo.svg";
 import patriaBank from "./images/patria-bank.png";
 import "./App.scss";
+import { LanguageMenu } from "./components/LanguageMenu";
 
 const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
 const TermsAndConditions = lazy(() =>
   import("./components/TermsAndConditions")
 );
 const FooterWrapper = lazy(() => import("./components/Footer"));
+
+i18n.loadLocaleData({
+  en: { plurals: en },
+  ro: { plurals: ro },
+  uk: { plurals: uk },
+  ru: { plurals: ru },
+});
+i18n.load({
+  ro: messagesRo,
+});
+i18n.activate("ro");
 
 const AppLogo = () => (
   <Link to="/">
@@ -45,7 +62,7 @@ const MenuItems = [
     rel="noopener noreferrer"
     key={"stirioficiale"}
   >
-    Știri oficiale
+    <Trans>Știri oficiale</Trans>
   </a>,
   <a
     href="https://cetrebuiesafac.ro"
@@ -53,7 +70,7 @@ const MenuItems = [
     rel="noopener noreferrer"
     key={"cetrebuiesafac"}
   >
-    Ce trebuie să fac
+    <Trans>Ce trebuie să fac</Trans>
   </a>,
   <a
     href="https://datelazi.ro"
@@ -61,7 +78,7 @@ const MenuItems = [
     rel="noopener noreferrer"
     key={"datelazi"}
   >
-    Date la zi
+    <Trans>Date la zi</Trans>
   </a>,
   <a
     href="https://rohelp.ro/ro/"
@@ -69,7 +86,7 @@ const MenuItems = [
     rel="noopener noreferrer"
     key={"rohelp"}
   >
-    RoHelp
+    <Trans>RoHelp</Trans>
   </a>,
   <a
     href="https://diasporahub.ro"
@@ -77,15 +94,18 @@ const MenuItems = [
     rel="noopener noreferrer"
     key={"diasporahub"}
   >
-    Diaspora Hub
+    <Trans>Diaspora Hub</Trans>
   </a>,
+  <LanguageMenu key="language" />,
 ];
 
 const AppWrapper = () => {
   return (
-    <Router>
-      <App />
-    </Router>
+    <I18nProvider i18n={i18n} forceRenderOnLocaleChange={false}>
+      <Router>
+        <App />
+      </Router>
+    </I18nProvider>
   );
 };
 

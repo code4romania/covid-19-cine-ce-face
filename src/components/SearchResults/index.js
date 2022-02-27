@@ -3,6 +3,7 @@ import { SearchResultListItem } from "@code4ro/taskforce-fe-components";
 import PropTypes from "prop-types";
 import Fuse from "fuse.js";
 import "./styles.scss";
+import { Trans } from "@lingui/macro";
 
 const SearchResults = ({ query, data = [], readMore }) => {
   /**
@@ -53,7 +54,7 @@ const SearchResults = ({ query, data = [], readMore }) => {
   return (
     <div className="search-results-container">
       <h1 className="results-description">
-        Rezultatele căutării pentru {`"${query}"`}:
+        <Trans>Rezultatele căutării pentru</Trans> {`"${query}"`}:
       </h1>
       {results.map(({ item: doc }) => {
         return (
@@ -63,7 +64,7 @@ const SearchResults = ({ query, data = [], readMore }) => {
                 className="read-more"
                 onClick={() => readMore(doc.fullSlug)}
               >
-                Citește mai mult
+                <Trans>Citește mai mult</Trans>
               </span>
             </SearchResultListItem>
           </div>
